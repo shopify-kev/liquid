@@ -639,16 +639,49 @@
 }
 {% endschema %}
 
-<div class="wrapper">
-  <div style="background: #1e1e1e; color: #dcdcdc; padding: 20px; border-radius: 10px; font-family: 'Courier New', Courier, monospace;">
-{% raw %}
+<style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .code-container {
+            background: #1e1e1e;
+            color: #dcdcdc;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+        .output-container {
+            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+            color: #333;
+            padding: 20px;
+            border: 2px solid #bbb;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+
+    <div class="container">
+        <div class="code-container">
+            <pre>
+<code>
+    {% raw %}
   {% assign my_string = 'Hello Singapore!' %}
   {{ my_string }}
   {% endraw %}
-  </div>
-
-  <div style="background: #f0f0f0; color: #333; padding: 15px; border: 2px solid #ccc; border-radius: 8px; font-family: Arial, sans-serif;">
-{% assign my_string = 'Hello Singapore!' %}
+  </code>
+            </pre>
+        </div>
+        <div class="output-container">
+        
+        {% assign my_string = 'Hello Singapore!' %}
 {{ my_string }}
 </div>
-</div>
+    </div>
+
+
+    
