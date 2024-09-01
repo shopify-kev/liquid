@@ -742,7 +742,41 @@ You’ve got the energy to chase your dreams
 
 </div>
 
+<br>
 
+<div class="output-container">
+
+{%- form 'customer_login' -%}
+  {{ form.errors | default_errors }}
+
+  <div>
+    <label for="customerEmail">Email Address</label>
+    <input type="email"
+      name="customer[email]"
+      id="customerEmail"
+      autocorrect="off"
+      autocapitalize="off"
+      autocomplete="email">
+  </div>
+  <div>
+    <label for="customerPassword">Password</label>
+    <input type="password"
+      name="customer[password]"
+      id="customerPassword">
+  </div>
+
+  <input type="submit" value="Sign In" />
+
+  <p>
+    {{ 'Create Account' | customer_register_link }}
+  </p>
+  <p>
+    <a href="#recover">Forgot your password?</a>
+  </p>
+
+{%- endform -%}
+
+</div>
 
     </div>
 
