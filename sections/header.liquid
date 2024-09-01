@@ -641,9 +641,16 @@
 
 <style>
         .container {
-            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            gap: 20px;
+        }
+        .code-container, .output-container {
+            flex: 1;
+            min-width: 0; /* Prevent overflow */
         }
         .code-container {
             background: #1e1e1e;
@@ -651,7 +658,6 @@
             padding: 20px;
             border-radius: 10px;
             font-family: 'Courier New', Courier, monospace;
-            margin-bottom: 20px;
             overflow-x: auto;
         }
         .output-container {
