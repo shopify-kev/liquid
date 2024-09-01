@@ -827,7 +827,7 @@ You’ve got the energy to chase your dreams
 
 {% for designer in shop.metaobjects.designer.values %}
 
-  <img src="{{ designer.photo | img_url:500px }}"><br>
+  <img src="{{ designer.photo | img_url:'500px' }}"><br>
   {{ designer.name }}<br>
 
 {% endfor %}  
